@@ -7,6 +7,10 @@ import {MenuItem} from '../model/RestaurantModel';
   template: `
     <div>
       <h5>{{menuItem.name}}</h5>
+      <h5>{{menuItem.description}}</h5>
+      <h5>{{menuItem.price}}</h5>
+      <h5>{{menuItem.ingredients}}</h5>
+      <h5>{{menuItem.photoUrl}}</h5>
     </div>
   `
 })

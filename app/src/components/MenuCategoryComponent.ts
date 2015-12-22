@@ -7,6 +7,9 @@ import {MenuItemComponent} from './MenuItemComponent';
   inputs: ['menuCategory'],
   directives:[MenuItemComponent],
   template: `
+  	<div>
+  	<h4>Category: {{menuCategory.name}}</h4>
+  	<h4>DEscription: {{menuCategory.description}}</h4>
 	<menuItem *ngFor="#menuItem of menuCategory.menuItems" [menuItem]="menuItem">
   `
 })

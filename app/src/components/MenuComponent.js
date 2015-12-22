@@ -27,7 +27,7 @@ System.register(['angular2/core', './MenuCategoryComponent'], function(exports_1
                         selector: 'menu',
                         inputs: ['menu'],
                         directives: [MenuCategoryComponent_1.MenuCategoryComponent],
-                        template: "\n\t<menuCategory *ngFor=\"#menuCategory of menu.categories\" [menuCategory]=\"menuCategory\">\n  "
+                        template: "\n  \t<div>\n  \t\t<h3>Menu</h3>\n\t\t<menuCategory *ngFor=\"#menuCategory of menu.categories\" [menuCategory]=\"menuCategory\"></menuCategory>\n\t</div>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], MenuComponent);

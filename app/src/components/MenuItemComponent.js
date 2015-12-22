@@ -23,7 +23,7 @@ System.register(['angular2/core'], function(exports_1) {
                     core_1.Component({
                         selector: 'menuItem',
                         inputs: ['menuItem'],
-                        template: "\n    <div>\n      <h5>{{menuItem.name}}</h5>\n    </div>\n  "
+                        template: "\n    <div>\n      <h5>{{menuItem.name}}</h5>\n      <h5>{{menuItem.description}}</h5>\n      <h5>{{menuItem.price}}</h5>\n      <h5>{{menuItem.ingredients}}</h5>\n      <h5>{{menuItem.photoUrl}}</h5>\n    </div>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], MenuItemComponent);

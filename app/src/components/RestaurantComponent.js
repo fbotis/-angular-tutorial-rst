@@ -27,7 +27,7 @@ System.register(['angular2/core', './MenuComponent'], function(exports_1) {
                         selector: 'restaurant',
                         inputs: ['restaurant'],
                         directives: [MenuComponent_1.MenuComponent],
-                        template: "\n\t<menu [menu]=\"restaurant.menu\">\n  "
+                        template: "\n\t<div>Restaurant name: {{restaurant.name}}</div>\n\t<div>Restaurant description: {{restaurant.description}}</div>\n\t<div>Restaurant type: {{restaurant.type}}</div>\n\t<div>Restaurant address: {{restaurant.address}}</div>\n\t<div>Restaurant location: {{restaurant.location}}</div>\n\t<div>Restaurant tel: {{restaurant.tel}}</div>\n\t<div>Restaurant email: {{restaurant.email}}</div>\n\t<div>Restaurant websiteurl: {{restaurant.websiteurl}}</div>\n\t<div>Restaurant fburl: {{restaurant.fburl}}</div>\n\t<div>Restaurant tripadvisorurl: {{restaurant.tripadvisorurl}}</div>\n\t<div>Restaurant openhours: {{restaurant.openhours}}</div>\n\t<div>Restaurant photos: {{restaurant.photos}}</div>\n\n\n\t<menu [menu]=\"restaurant.menu\">\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], RestaurantComponent);

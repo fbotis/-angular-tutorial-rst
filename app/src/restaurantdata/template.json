@@ -1,0 +1,29 @@
+{
+    "name": "restaurantName",
+    "address": "input.address;",
+    "description": "restDescript",
+    "email": "input.email;",
+    "fburl": "input.fburl;",
+    "location": "input.location;",
+    "hasTakeAway": true,
+    "hasDelivery": false,
+    "menu": {
+        "menuCategories": [{
+            "description": "categoryDescription",
+            "menuItems": [{
+                "description": "menuItemDescription",
+                "ingredients": "menuItemIngredients",
+                "name": "menuItemName",
+                "photoUrl": "menuItemPhotoUrl",
+                "price": "1.23"
+            }],
+            "name": "categoryName"
+        }]
+    },
+    "openhours": "input.openhours;",
+    "photos": "input.photos;",
+    "tel": "input.tel;",
+    "tripadvisorurl": "input.tripadvisorurl;",
+    "type": "restType",
+    "websiteurl": "input.websiteurl;"
+}

@@ -7,7 +7,10 @@ import {MenuCategoryComponent} from './MenuCategoryComponent';
   inputs: ['menu'],
   directives:[MenuCategoryComponent],
   template: `
-	<menuCategory *ngFor="#menuCategory of menu.categories" [menuCategory]="menuCategory">
+  	<div>
+  		<h3>Menu</h3>
+		<menuCategory *ngFor="#menuCategory of menu.categories" [menuCategory]="menuCategory"></menuCategory>
+	</div>
   `
 })
 export class MenuComponent {
