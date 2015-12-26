@@ -27,7 +27,7 @@ System.register(['angular2/core', './MenuItemComponent'], function(exports_1) {
                         selector: 'menuCategory',
                         inputs: ['menuCategory'],
                         directives: [MenuItemComponent_1.MenuItemComponent],
-                        template: "\n  \t<div>\n  \t<h4>Category: {{menuCategory.name}}</h4>\n  \t<h4>DEscription: {{menuCategory.description}}</h4>\n\t<menuItem *ngFor=\"#menuItem of menuCategory.menuItems\" [menuItem]=\"menuItem\">\n  "
+                        templateUrl: 'app/src/templates/menuCategoryComponent.htm'
                     }), 
                     __metadata('design:paramtypes', [])
                 ], MenuCategoryComponent);

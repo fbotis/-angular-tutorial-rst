@@ -12,6 +12,7 @@ System.register([], function(exports_1) {
                     this.price = input.price;
                     this.ingredients = input.ingredients;
                     this.photoUrl = input.photoUrl;
+                    this.weight = input.weight;
                     return this;
                 };
                 return MenuItem;
@@ -52,6 +53,7 @@ System.register([], function(exports_1) {
                 }
                 Restaurant.prototype.deserialize = function (input) {
                     this.name = input.name;
+                    this.logoUrl = input.logoUrl;
                     this.description = input.description;
                     this.type = input.type;
                     this.address = input.address;

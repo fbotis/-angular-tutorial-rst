@@ -7,133 +7,125 @@
     "location": "36.135208,-5.354150",
     "menu": {
         "menuCategories": [{
-                "name": "Appetisers",
+            "name": "Appetisers",
+            "description": "???",
+            "menuItems": [{
+                "name": "Masala Papad",
+                "price": "1.00",
+                "photoUrl": "http://www.acurryofalife.com/wp-content/uploads/2013/06/IMG_0056.jpg",
+                "description": "???",
+                "ingredients": "???",
+                "weight": "80 gr"
+            }, {
+                "name": "Papadums",
+                "price": "0.35",
+                "photoUrl": "http://www.acurryofalife.com/wp-content/uploads/2013/06/IMG_0056.jpg",
+                "description": "???",
+                "ingredients": "???",
+                "weight": "80 gr"
+            }, {
+                "name": "Pickle Tray",
+                "price": "1.50",
+                "photoUrl": "http://www.acurryofalife.com/wp-content/uploads/2013/06/IMG_0056.jpg",
+                "description": "???",
+                "ingredients": "???",
+                "weight": "80 gr"
+            }]
+        }, {
+            "name": "Side Dishes",
+            "description": "???",
+            "menuItems": [{
+                "name": "Raita of Your Choice",
+                "price": "3.00",
+                "photoUrl": "http://www.acurryofalife.com/wp-content/uploads/2013/06/IMG_0056.jpg",
+                "description": "???",
+                "ingredients": "???",
+                "weight": "80 gr"
+            }, {
+                "name": "Green Salad (Seasonal)",
+                "price": "3.00",
+                "photoUrl": "http://www.acurryofalife.com/wp-content/uploads/2013/06/IMG_0056.jpg",
+                "description": "???",
+                "ingredients": "???",
+                "weight": "80 gr"
+            }]
+        }, {
+            "name": "Starters - Vegetarian",
+            "description": "???",
+            "menuItems": [{
+                "name": "Masala Papad",
+                "price": "1.00",
+                "photoUrl": "http://www.acurryofalife.com/wp-content/uploads/2013/06/IMG_0056.jpg",
+                "description": "???",
+                "ingredients": "???",
+                "weight": "80 gr"
+            }]
+        }, {
+            "name": "Non-Vegetarian Starters",
+            "description": "???",
+            "menuItems": [{
+                "name": "Masala Papad",
+                "price": "1.00",
+                "photoUrl": "http://www.acurryofalife.com/wp-content/uploads/2013/06/IMG_0056.jpg",
+                "description": "???",
+                "ingredients": "???",
+                "weight": "80 gr"
+            }]
+        }, {
+            "name": "Vegetarian Main Dishes",
+            "description": "???",
+            "menuItems": [{
+                "name": "Masala Papad",
+                "price": "1.00",
+                "photoUrl": "http://www.acurryofalife.com/wp-content/uploads/2013/06/IMG_0056.jpg",
+                "description": "???",
+                "ingredients": "???",
+                "weight": "80 gr"
+            }]
+        }, {
+            "name": "Rice and Biryanis",
+            "description": "???",
+            "menuItems": [{
+                "name": "Masala Papad",
+                "price": "1.00",
+                "photoUrl": "http://www.acurryofalife.com/wp-content/uploads/2013/06/IMG_0056.jpg",
+                "description": "???",
+                "ingredients": "???",
+                "weight": "80 gr"
+            }, {
+                "name": "Chicken Dishes",
                 "description": "???",
                 "menuItems": [{
                     "name": "Masala Papad",
                     "price": "1.00",
-                    "photoUrl": "???",
+                    "photoUrl": "http://www.acurryofalife.com/wp-content/uploads/2013/06/IMG_0056.jpg",
                     "description": "???",
-                    "ingredients": "???"
-                }, {
-                    "name": "Papadums",
-                    "price": "0.35",
-                    "photoUrl": "???",
-                    "description": "???",
-                    "ingredients": "???"
-                }, {
-                    "name": "Pickle Tray",
-                    "price": "1.50",
-                    "photoUrl": "???",
-                    "description": "???",
-                    "ingredients": "???"
+                    "ingredients": "???",
+                    "weight": "80 gr"
                 }]
-
             }, {
-                "name": "Side Dishes",
-                "description": "???",
-                "menuItems": [{
-                    "name": "Raita of Your Choice",
-                    "price": "3.00",
-                    "photoUrl": "???",
-                    "description": "???",
-                    "ingredients": "???"
-                }, {
-                    "name": "Green Salad (Seasonal)",
-                    "price": "3.00",
-                    "photoUrl": "???",
-                    "description": "???",
-                    "ingredients": "???"
-                }]
-
-            }, {
-                "name": "Starters - Vegetarian",
+                "name": "Tandoori Dishes",
                 "description": "???",
                 "menuItems": [{
                     "name": "Masala Papad",
                     "price": "1.00",
-                    "photoUrl": "???",
+                    "photoUrl": "http://www.acurryofalife.com/wp-content/uploads/2013/06/IMG_0056.jpg",
                     "description": "???",
-                    "ingredients": "???"
+                    "ingredients": "???",
+                    "weight": "80 gr"
                 }]
-
             }, {
-                "name": "Non-Vegetarian Starters",
+                "name": "Lamb Dishes",
                 "description": "???",
                 "menuItems": [{
                     "name": "Masala Papad",
                     "price": "1.00",
-                    "photoUrl": "???",
+                    "photoUrl": "http://www.acurryofalife.com/wp-content/uploads/2013/06/IMG_0056.jpg",
                     "description": "???",
-                    "ingredients": "???"
+                    "ingredients": "???",
+                    "weight": "80 gr"
                 }]
-
-            }, {
-                "name": "Vegetarian Main Dishes",
-                "description": "???",
-                "menuItems": [{
-                    "name": "Masala Papad",
-                    "price": "1.00",
-                    "photoUrl": "???",
-                    "description": "???",
-                    "ingredients": "???"
-                }]
-
-            },
-
-            {
-                "name": "Rice and Biryanis",
-                "description": "???",
-                "menuItems": [{
-                        "name": "Masala Papad",
-                        "price": "1.00",
-                        "photoUrl": "???",
-                        "description": "???",
-                        "ingredients": "???"
-                    }
-
-                    ,
-
-                    {
-                        "name": "Chicken Dishes",
-                        "description": "???",
-                        "menuItems": [{
-                            "name": "Masala Papad",
-                            "price": "1.00",
-                            "photoUrl": "???",
-                            "description": "???",
-                            "ingredients": "???"
-                        }]
-
-                    },
-
-                    {
-                        "name": "Tandoori Dishes",
-                        "description": "???",
-                        "menuItems": [{
-                            "name": "Masala Papad",
-                            "price": "1.00",
-                            "photoUrl": "???",
-                            "description": "???",
-                            "ingredients": "???"
-                        }]
-                    }
-
-                    ,
-
-                    {
-                        "name": "Lamb Dishes",
-                        "description": "???",
-                        "menuItems": [{
-                            "name": "Masala Papad",
-                            "price": "1.00",
-                            "photoUrl": "???",
-                            "description": "???",
-                            "ingredients": "???"
-                        }]
-                    }
-                ]
-            }
-        ]
+            }]
+        }]
     }
 }

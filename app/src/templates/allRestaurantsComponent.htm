@@ -1,0 +1,35 @@
+<div>
+    <div class="row">
+        <div class="col s3">
+            <div class="collection">
+                <a>
+                    <input class="collection-item" type="text" placeholder="Filter restaurants by name" id="filterByName">
+                </a>
+                <a href="#!" class="collection-item">Alvin</a>
+                <a href="#!" class="collection-item active">Alvin</a>
+                <a href="#!" class="collection-item">Alvin</a>
+                <a href="#!" class="collection-item">Alvin</a>
+            </div>
+        </div>
+        <div class="col s9">
+            <div class="row card-panel">
+
+
+                <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="30%" src="https://maps.google.com/maps?hl=en&q=Pariser Platz, 10117 Berlin&ie=UTF8&t=roadmap&z=6&iwloc=B&output=embed">
+                    <div>
+                        <small><a href="http://embedgooglemaps.com">embedgooglemaps.com</a>
+                        </small>
+                    </div>
+                    <div>
+                        <small><a href="https://ultimatewebtraffic.com/">buy websit traffic Ultimatewebtraffic</a>
+                        </small>
+                    </div>
+                </iframe>
+            </div>
+            <div class="row">
+                <restaurant *ngFor="#restaurant of restaurants" [restaurant]="restaurant">
+                </restaurant>
+            </div>
+        </div>
+    </div>
+</div>

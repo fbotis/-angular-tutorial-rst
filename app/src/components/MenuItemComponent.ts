@@ -4,17 +4,8 @@ import {MenuItem} from '../model/RestaurantModel';
 @Component({
   selector: 'menuItem',
   inputs: ['menuItem'],
-  template: `
-    <div>
-      <h5>{{menuItem.name}}</h5>
-      <h5>{{menuItem.description}}</h5>
-      <h5>{{menuItem.price}}</h5>
-      <h5>{{menuItem.ingredients}}</h5>
-      <h5>{{menuItem.photoUrl}}</h5>
-    </div>
-  `
+  templateUrl: 'app/src/templates/menuItem.htm'
 })
 export class MenuItemComponent {
   menuItem: MenuItem;
-
 }

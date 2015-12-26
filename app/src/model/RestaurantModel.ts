@@ -8,6 +8,7 @@ export class MenuItem implements Serializable<MenuItem> {
 	price: number;
 	ingredients: string;
 	photoUrl: string;
+	weight: number;
 
 	deserialize(input) {
 		this.name = input.name;
@@ -15,6 +16,7 @@ export class MenuItem implements Serializable<MenuItem> {
 		this.price = input.price;
 		this.ingredients = input.ingredients;
 		this.photoUrl = input.photoUrl;
+		this.weight = input.weight;
 		return this;
 	}
 }
@@ -54,6 +56,7 @@ export class Menu implements Serializable<Menu>{
 
 export class Restaurant implements Serializable<Restaurant>{
 	name: string;
+	logoUrl: string;
 	description: string;
 	type: string;
 
@@ -69,10 +72,14 @@ export class Restaurant implements Serializable<Restaurant>{
 	openhours: string;
 	photos: Array<string>;
 
+	hasTakeAway: boolean;
+	hasDelivery: boolean;
+
 	menu: Menu;
 
 	deserialize(input) {
 		this.name = input.name;
+		this.logoUrl = input.logoUrl;
 		this.description = input.description;
 		this.type = input.type;
 
