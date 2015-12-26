@@ -3,7 +3,10 @@
 <head>
     <title>Angular 2 QuickStart</title>
 
+
     <!-- 1. Load libraries -->
+
+
     <script src="node_modules/traceur/bin/traceur-runtime.js"></script>
     <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
@@ -14,7 +17,6 @@
 
     <!-- 2. Configure SystemJS -->
     <!-- Latest compiled and minified CSS -->
-    <script src="/app/thirdparty/angular2_google_maps.js"></script>
     <link rel="stylesheet" href="/app/style/style.css" />
 
     <link data-require="materialize@*" data-semver="0.96.1" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css" />
@@ -24,6 +26,27 @@
     <script data-require="jquery@2.1.4" data-semver="2.1.4" src="https://code.jquery.com/jquery-2.1.4.js"></script>
     <script data-require="materialize@*" data-semver="0.96.1" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
 
+
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script>
+    function initialize() {
+        var mapProp = {
+            center: new google.maps.LatLng(51.508742, -0.120850),
+            zoom: 5,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+    }
+    jQuery(document).ready(function() {
+        if ($('#googleMap').is(':visible')) { //if the container is visible on the page
+            console.log("map")
+            initialize();
+        } else {
+            setTimeout(initialize(), 5000); //wait 50 ms, then try again
+        }
+
+    });
+    </script>
 
 
 
@@ -47,5 +70,7 @@
 <body>
     <rst>Loading...</rst>
 </body>
+
+
 
 </html>
