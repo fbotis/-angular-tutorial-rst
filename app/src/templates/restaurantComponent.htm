@@ -1,32 +1,40 @@
 <div>
     <div class="card-panel">
         <div class="row">
-            <div class="col s4">
-                <img src="https://placehold.it/100x100" />
+            <div class="col">
+                <img class="restaurantLogoImg" src="{{restaurant.logoUrl}}" />
             </div>
-            <div class="col s4">
-                <div>{{restaurant.name}}</div>
-                <div>Type: {{restaurant.type}}</div>
-                <div>Open Hours: {{restaurant.openhours}}</div>
+            <div class="col">
+                <h4 class="restaurantName">{{restaurant.name}}</h4>
             </div>
-            <div class="col s4">
+        </div>
+        <div class="row">
+            <div class="col">
+                <div>{{restaurant.type}}</div>
+            </div>
+            <div class="col">
+                <div>{{restaurant.openhours}}</div>
+            </div>
+            <div class="col">
                 <div>Take away: {{restaurant.hasTakeAway}}</div>
+            </div>
+            <div class="col">
                 <div>Delivery: {{restaurant.hasDelivery}}</div>
             </div>
         </div>
 
         <div class="row ">
             <div class="col">
-                <img src="https://placehold.it/150x150" />
+                <img class="restaurantimg" src="{{restaurant.photos[0]}}" />
             </div>
             <div class="col">
-                <img src="https://placehold.it/150x150" />
+                <img class="restaurantimg" src="{{restaurant.photos[1]}}" />
             </div>
             <div class="col">
-                <img src="https://placehold.it/150x150" />
+                <img class="restaurantimg" src="{{restaurant.photos[2]}}" />
             </div>
             <div class="col">
-                <img src="https://placehold.it/150x150" />
+                <img class="restaurantimg" src="{{restaurant.photos[3]}}" />
             </div>
         </div>
 
@@ -34,7 +42,9 @@
             <div class="col s6">
                 <ul class="collection">
                     <li class="collection-item">Address: {{restaurant.address}}</li>
-                    <li class="collection-item">Tel: {{restaurant.tel}}</li>
+                    <li class="collection-item"> <i class="material-icons">call</i>
+                        {{restaurant.tel}}
+                    </li>
                     <li class="collection-item">Email: {{restaurant.email}}</li>
                     <li class="collection-item">Website: {{restaurant.websiteurl}}</li>
                     <li class="collection-item">Facebook: {{restaurant.fburl}}</li>

@@ -78,7 +78,7 @@ export class Restaurant implements Serializable<Restaurant>{
 
 	deserialize(input) {
 		this.name = input.name;
-		this.logoUrl = input.logourl;
+		this.logoUrl = input.logoUrl;
 		this.type = input.type;
 
 		this.address = input.address;

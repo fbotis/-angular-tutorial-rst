@@ -7,3 +7,12 @@ li {
 body {
     background: #f0f0f0;
 }
+.restaurantimg {
+    width: 150px;
+    height: 150px;
+}
+.restaurantLogoImg {
+    width: 100px;
+    height: 100px;
+}
+.restaurantName {}

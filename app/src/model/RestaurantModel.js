@@ -53,7 +53,7 @@ System.register([], function(exports_1) {
                 }
                 Restaurant.prototype.deserialize = function (input) {
                     this.name = input.name;
-                    this.logoUrl = input.logourl;
+                    this.logoUrl = input.logoUrl;
                     this.type = input.type;
                     this.address = input.address;
                     this.location = input.location;
