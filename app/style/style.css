@@ -15,4 +15,20 @@ body {
     width: 100px;
     height: 100px;
 }
+.fbicon {
+    width: 24px;
+    height: 24px;
+}
+.websiteurl {
+    color: black;
+}
+.fburl {
+    color: black;
+}
+.tripadvisorurl {
+    color: black;
+}
+.takeawayicon {
+    height: 50px;
+}
 .restaurantName {}

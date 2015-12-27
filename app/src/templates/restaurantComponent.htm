@@ -16,7 +16,9 @@
                 <div>{{restaurant.openhours}}</div>
             </div>
             <div class="col">
-                <div>Take away: {{restaurant.hasTakeAway}}</div>
+                <div>
+                    <img class="takeawayicon" src="app/assets/takeawayicon.png" />
+                </div>
             </div>
             <div class="col">
                 <div>Delivery: {{restaurant.hasDelivery}}</div>
@@ -40,15 +42,30 @@
 
         <div class="row">
             <div class="col s6">
-                <ul class="collection">
-                    <li class="collection-item">Address: {{restaurant.address}}</li>
+                <ul class="collection container">
+                    <li class="collection-item"><i class="material-icons">store</i> {{restaurant.address}}</li>
                     <li class="collection-item"> <i class="material-icons">call</i>
                         {{restaurant.tel}}
                     </li>
-                    <li class="collection-item">Email: {{restaurant.email}}</li>
-                    <li class="collection-item">Website: {{restaurant.websiteurl}}</li>
-                    <li class="collection-item">Facebook: {{restaurant.fburl}}</li>
-                    <li class="collection-item">Tripadvisor: {{restaurant.tripadvisorurl}}</li>
+                    <li class="collection-item"><i class="material-icons">email</i> {{restaurant.email}}</li>
+                    <li class="collection-item">
+
+                        <a class="waves-effect waves-teal btn-flat websiteurl" href="{{restaurant.websiteurl}}">
+                            <i class="material-icons">info</i>
+                            <span>Website</span>
+                        </a>
+                    </li>
+                    <li class="collection-item">
+                        <a class="waves-effect waves-teal btn-flat fburl" href="{{restaurant.fburl}}">
+                            <img class="fbicon" src="app/assets/fbicon-32.png" />
+                            <span>Facebook page</span>
+                        </a>
+                    </li>
+                    <li class="collection-item">
+                        <a class="waves-effect waves-teal btn-flat tripadvisorurl" href="{{restaurant.tripadvisorurl}}">
+                            <img src="app/assets/tripadvisoricon.png" />
+                            <span>Tripadvisor page</span>
+                        </a>
                 </ul>
             </div>
             <div class="col s6">

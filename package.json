@@ -17,7 +17,7 @@
         "rxjs": "5.0.0-beta.0",
         "traceur-loader": "^0.6.3",
         "zone.js": "0.5.10",
-        "angular2-google-maps": "0.4.0"
+        "underscore": "^1.8.3"
     },
     "devDependencies": {
         "concurrently": "^1.0.0",

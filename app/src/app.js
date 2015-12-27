@@ -1,4 +1,4 @@
-System.register(['angular2/platform/browser', 'angular2/router', "./components/AllRestaurantsComponent", "./components/SearchFoodComponent", 'angular2/core'], function(exports_1) {
+System.register(['angular2/platform/browser', 'angular2/router', "./components/AllRestaurantsComponent", "./components/SearchFoodComponent", 'angular2/core', "./services/RestaurantsService", "angular2/http"], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,7 +8,7 @@ System.register(['angular2/platform/browser', 'angular2/router', "./components/A
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var browser_1, router_1, AllRestaurantsComponent_1, SearchFoodComponent_1, core_1;
+    var browser_1, router_1, AllRestaurantsComponent_1, SearchFoodComponent_1, core_1, RestaurantsService_1, http_1;
     var RstApp;
     return {
         setters:[
@@ -26,6 +26,12 @@ System.register(['angular2/platform/browser', 'angular2/router', "./components/A
             },
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (RestaurantsService_1_1) {
+                RestaurantsService_1 = RestaurantsService_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
             }],
         execute: function() {
             RstApp = (function () {
@@ -48,7 +54,8 @@ System.register(['angular2/platform/browser', 'angular2/router', "./components/A
                 ], RstApp);
                 return RstApp;
             })();
-            browser_1.bootstrap(RstApp, [
+            browser_1.bootstrap(RstApp, [http_1.HTTP_PROVIDERS,
+                RestaurantsService_1.RestaurantsService,
                 router_1.ROUTER_BINDINGS,
                 core_1.bind(router_1.ROUTER_PRIMARY_COMPONENT).toValue(RstApp),
                 core_1.bind(router_1.APP_BASE_HREF).toValue('/'),

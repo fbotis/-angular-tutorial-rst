@@ -3,17 +3,15 @@
         <div class="col s3">
             <div class="collection">
                 <a>
-                    <input class="collection-item" type="text" placeholder="Filter restaurants by name" id="filterByName">
+                    <input class="collection-item" type="text" placeholder="Filter restaurants by name" id="filterByName" [(ngModel)]="filter" (keyup)="filterChanged()" />
                 </a>
-                <a href="#!" class="collection-item">Alvin</a>
-                <a href="#!" class="collection-item active">Alvin</a>
-                <a href="#!" class="collection-item">Alvin</a>
-                <a href="#!" class="collection-item">Alvin</a>
+                <a href="#" class="collection-item" *ngFor="#restaurantName of filteredRestaurantNames.keys()" (click)="restaurantSelected(restaurantName)">{{restaurantName}}</a>
             </div>
         </div>
-        <div class="col s9">
+
+        <div *ngIf="selectedRestaurant!=nil" class="col s9">
             <div class="row">
-                <restaurant *ngFor="#restaurant of restaurants" [restaurant]="restaurant">
+                <restaurant [restaurant]="selectedRestaurant">
                 </restaurant>
             </div>
         </div>

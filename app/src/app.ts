@@ -4,6 +4,8 @@ import {PrimaryNavBarComponent} from "./components/PrimaryNavBarComponent";
 import {AllRestaurantsComponent} from "./components/AllRestaurantsComponent";
 import {SearchFoodComponent} from "./components/SearchFoodComponent";
 import {bind, Component, View} from 'angular2/core';
+import {RestaurantsService} from "./services/RestaurantsService";
+import {Http, Response, HTTP_PROVIDERS} from "angular2/http";
 
 
 @Component({
@@ -22,7 +24,8 @@ class RstApp {
   }
 }
 
-bootstrap(RstApp,[
+bootstrap(RstApp, [HTTP_PROVIDERS,
+  RestaurantsService,
   ROUTER_BINDINGS,
   bind(ROUTER_PRIMARY_COMPONENT).toValue(RstApp),
   bind(APP_BASE_HREF).toValue('/'),

@@ -1,0 +1,23 @@
+{
+    "restaurants": [{
+            "name": "Raj's Curry House",
+            "id": 0
+        }, {
+            "name": "Waterfront",
+            "id": 1
+        }, {
+            "name": "Costa",
+            "id": 2
+        }, {
+            "name": "Don Pepe",
+            "id": 3
+        }, {
+            "name": "Antonia",
+            "id": 4
+        }, {
+            "name": "Florin",
+            "id": 5
+        }
+
+    ]
+}
