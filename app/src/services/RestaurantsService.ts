@@ -1,10 +1,8 @@
-/// <reference path="../../../node_modules/underscore/underscore.d.ts" />
 
 import {Component, Injectable, EventEmitter} from "angular2/core";
 import {Restaurant} from "../model/RestaurantModel";
 import {Http, Response, HTTP_PROVIDERS} from "angular2/http";
 import {Dictionary} from "../util/Dictionary";
-import * as _ from "../../../node_modules/underscore/underscore.js";
 
 @Injectable()
 export class RestaurantsService {

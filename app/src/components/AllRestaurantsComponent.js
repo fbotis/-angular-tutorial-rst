@@ -1,5 +1,5 @@
 /// <reference path="../../../node_modules/underscore/underscore.d.ts" />
-System.register(["angular2/core", "../services/RestaurantsService", "./RestaurantComponent", "angular2/http", "../util/Dictionary", 'angular2/router', 'angular2/common'], function(exports_1) {
+System.register(["angular2/core", "../services/RestaurantsService", "./RestaurantComponent", "angular2/http", "../util/Dictionary", 'angular2/router', 'angular2/common', "./RestaurantFormComponent"], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
         switch (arguments.length) {
@@ -11,7 +11,7 @@ System.register(["angular2/core", "../services/RestaurantsService", "./Restauran
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, RestaurantsService_1, RestaurantComponent_1, http_1, Dictionary_1, router_1, common_1;
+    var core_1, RestaurantsService_1, RestaurantComponent_1, http_1, Dictionary_1, router_1, common_1, RestaurantFormComponent_1;
     var AllRestaurantsComponent;
     return {
         setters:[
@@ -35,6 +35,9 @@ System.register(["angular2/core", "../services/RestaurantsService", "./Restauran
             },
             function (common_1_1) {
                 common_1 = common_1_1;
+            },
+            function (RestaurantFormComponent_1_1) {
+                RestaurantFormComponent_1 = RestaurantFormComponent_1_1;
             }],
         execute: function() {
             AllRestaurantsComponent = (function () {
@@ -74,7 +77,7 @@ System.register(["angular2/core", "../services/RestaurantsService", "./Restauran
                 };
                 AllRestaurantsComponent = __decorate([
                     core_1.Component({
-                        directives: [RestaurantComponent_1.RestaurantComponent, common_1.FORM_DIRECTIVES],
+                        directives: [RestaurantComponent_1.RestaurantComponent, common_1.FORM_DIRECTIVES, RestaurantFormComponent_1.RestaurantFormComponent],
                         providers: [http_1.HTTP_PROVIDERS],
                         templateUrl: 'app/src/templates/allRestaurantsComponent.htm'
                     }), 

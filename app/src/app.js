@@ -44,7 +44,6 @@ System.register(['angular2/platform/browser', 'angular2/router', "./components/A
                     this.router = router;
                 }
                 RstApp.prototype.filterChanged = function () {
-                    console.log("test");
                     this.router.navigate(['./Search', { query: this.filter }]);
                 };
                 RstApp = __decorate([

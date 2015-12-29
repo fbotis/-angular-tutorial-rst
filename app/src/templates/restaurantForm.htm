@@ -1,0 +1,166 @@
+<button class="btn" (click)="toggleRestaurantDetails()">Hide/Display Restaurant Details</button>
+
+<div class="row card-panel blue-grey" [ngClass]="{restaurantDetailsOff: restaurantDetailsOff}">
+    <div class="card">
+        <input placeholder="id (ex. 0)" id="id" type="text" [(ngModel)]="restaurant.id">
+        <label for="id">ID</label>
+    </div>
+
+
+    <div class="card">
+        <input placeholder="logourl (app/src/restaurantdata/0/logo.jpg)" id="logourl" type="text" [(ngModel)]="restaurant.logoUrl">
+        <label for="logourl">LOGOURL</label>
+    </div>
+
+    <div class="card">
+        <input placeholder="name (Raj's Curry House)" id="name" type="text" [(ngModel)]="restaurant.name">
+        <label>RESTAURANT NAME</label>
+    </div>
+
+    <div class="card">
+        <input placeholder="type (Indian, Pakistani)" id="type" type="text" [(ngModel)]="restaurant.type">
+        <label>TYPE</label>
+    </div>
+
+
+    <div class="card">
+        <input placeholder="openhours" id="openhours" type="text" [(ngModel)]="restaurant.openhours">
+        <label>OPEN HOURS</label>
+    </div>
+
+    <div class="card">
+        <input placeholder="tel (+350 200 46993)" id="tel" type="text" [(ngModel)]="restaurant.tel">
+        <label>TELEPHONE</label>
+    </div>
+
+
+    <div class="card">
+        <input placeholder="address (Unit R01, Ragged Staff Wharf, Queensway Road)" id="address" type="text" [(ngModel)]="restaurant.address">
+        <label>ADDRESS</label>
+    </div>
+
+
+
+    <div class="card">
+        <input placeholder="email (email@email.com)" id="email" type="text" [(ngModel)]="restaurant.email">
+        <label>EMAIL</label>
+    </div>
+
+
+    <div class="card">
+        <input placeholder="location (36.135208,-5.354150)" id="location" type="text" [(ngModel)]="restaurant.location">
+        <label>LOCATION</label>
+    </div>
+
+
+    <div class="card">
+        <input placeholder="websiteurl" id="websiteurl" type="text" [(ngModel)]="restaurant.websiteurl">
+        <label>WEBSITE</label>
+    </div>
+
+
+    <div class="card">
+        <input placeholder="fburl (https://www.facebook.com/Raj-Curry-House-1415386362006409/)" id="fburl" type="text" [(ngModel)]="restaurant.fburl">
+        <label>FACEBOOK URL</label>
+    </div>
+
+
+    <div class="card">
+        <input placeholder="tripadvisorurl (www.tripadvisor.com/Restaurant_Review-g187510-d5502261-Reviews-Raj_s_Curry_House-Gibraltar.html)" id="tripadvisorurl" type="text" [(ngModel)]="restaurant.tripadvisorurl">
+        <label>TRIPADVISOR URL</label>
+    </div>
+
+
+    <div class="card">
+        <input placeholder="photos (app/src/restaurantdata/0/0.jpg,app/src/restaurantdata/0/1.jpg)" id="photos" type="text" [(ngModel)]="restaurant.photos">
+        <label>PHOTOS</label>
+    </div>
+
+
+
+    <div class="card">
+        <input placeholder="hastakeaway" id="hastakeaway" type="checkbox">
+        <label for="hastakeaway">HASTAKEAWAY</label>
+    </div>
+
+
+    <div class="card">
+        <input placeholder="hasdelivery" id="hasdelivery" type="checkbox" checked>
+        <label for="hasdelivery">HASDELIVERY</label>
+    </div>
+
+</div>
+
+<div *ngFor="#category of restaurant.menu.categories" class="light-blue lighten-5" style="position:relative;left:20px;">
+    <div class="card black">
+        <hr>
+    </div>
+
+
+    <div class="card">
+        <input placeholder="menucategory (Appetisers)" id="menuCategory" type="text" [(ngModel)]="category.name">
+        <label>CATEGORY NAME</label>
+    </div>
+
+
+    <div class="card">
+        <input placeholder="descritpion (bla bla bla)" id="menuDescription" type="text" [(ngModel)]="category.description">
+        <label>CATEGORY DESCRIPTION</label>
+    </div>
+
+
+    <div *ngFor="#item of category.menuItems" class="card teal lighten-4" style="position:relative;left:20px;">
+        <div class="card red">
+            <hr>
+        </div>
+        <div>
+            <input placeholder="menuItemName (Burger)" id="menuItemName" type="text" [(ngModel)]="item.name">
+            <label>ITEM NAME</label>
+        </div>
+
+
+        <div>
+            <input placeholder="menuItemDescription (bla bla bla)" id="menuItemDescription" type="text" [(ngModel)]="item.description">
+            <label>ITEM DESCRIPTION</label>
+        </div>
+
+
+        <div>
+            <input placeholder="menuItemPrice (bla bla bla)" id="menuItemPrice" type="text" [(ngModel)]="item.price">
+            <label>ITEM PRICE</label>
+        </div>
+
+
+        <div>
+            <input placeholder="menuItemingredients(bla bla bla)" id="menuItemingredients" type="text" [(ngModel)]="item.ingredients">
+            <label>ITEM INGREDIENTS</label>
+        </div>
+
+
+        <div>
+            <input placeholder="menuItemphotoUrl (bla bla bla)" id="menuItemphotoUrl" type="text" [(ngModel)]="item.photoUrl">
+            <label>ITEM PHOTOURL</label>
+        </div>
+
+
+        <div>
+            <input placeholder="menuItemweight (bla bla bla)" id="menuItemweight" type="text" [(ngModel)]="item.weight">
+            <label>ITEM WEIGHT</label>
+        </div>
+        <div class="card red">
+            <hr>
+        </div>
+    </div>
+    <div class="row" style="text-align:center;">
+        <a (click)="addNewMenuItem(category)" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+    </div>
+    <div class="card black">
+        <hr>
+    </div>
+</div>
+
+
+
+<div class="row">
+    <button class="btn-large red" (click)="addNewCategory(menu)">Add new category</button>
+</div>

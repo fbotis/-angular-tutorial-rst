@@ -85,6 +85,7 @@ export class Menu implements Serializable<Menu>{
 
 
 export class Restaurant implements Serializable<Restaurant>{
+	id:number;
 	name: string;
 	logoUrl: string;
 	type: string;
@@ -107,6 +108,7 @@ export class Restaurant implements Serializable<Restaurant>{
 	menu: Menu;
 
 	deserialize(input) {
+		this.id=input.id;
 		this.name = input.name;
 		this.logoUrl = input.logoUrl;
 		this.type = input.type;

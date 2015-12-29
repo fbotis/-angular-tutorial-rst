@@ -32,3 +32,11 @@ body {
     height: 50px;
 }
 .restaurantName {}
+/*FORM*/
+
+.restaurantDetailsOff {
+    display: none;
+}
+.menuItemsOff {
+    display: none;
+}
