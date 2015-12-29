@@ -1,9 +1,12 @@
+/// <reference path="../../../node_modules/underscore/underscore.d.ts" />
 System.register(["angular2/core", "../model/RestaurantModel", "angular2/http", "../util/Dictionary"], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-        var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-        else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-        return c > 3 && r && Object.defineProperty(target, key, r), r;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
+        switch (arguments.length) {
+            case 2: return decorators.reduceRight(function(o, d) { return (d && d(o)) || o; }, target);
+            case 3: return decorators.reduceRight(function(o, d) { return (d && d(target, key)), void 0; }, void 0);
+            case 4: return decorators.reduceRight(function(o, d) { return (d && d(target, key, o)) || o; }, desc);
+        }
     };
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
@@ -32,7 +35,8 @@ System.register(["angular2/core", "../model/RestaurantModel", "angular2/http", "
                     this.restaurantNamesDictionary = new Dictionary_1.Dictionary();
                     this.crtRestaurant = new core_1.EventEmitter(true);
                     this.restaurantNames = new core_1.EventEmitter();
-                    this.initRestaurantNames();
+                    this.loadingRestaurants = new Array();
+                    this.initRestaurants();
                 }
                 RestaurantsService.prototype.setCrtRestaurant = function (resturantName) {
                     var _this = this;
@@ -59,7 +63,7 @@ System.register(["angular2/core", "../model/RestaurantModel", "angular2/http", "
                         return this.crtRestaurant;
                     }
                 };
-                RestaurantsService.prototype.initRestaurantNames = function () {
+                RestaurantsService.prototype.initRestaurants = function () {
                     var _this = this;
                     this.http.request("/app/src/restaurantdata/restaurants.json")
                         .subscribe(function (res) {
@@ -67,8 +71,30 @@ System.register(["angular2/core", "../model/RestaurantModel", "angular2/http", "
                         _this.restaurantNamesDictionary = new Dictionary_1.Dictionary();
                         for (var i = 0; i < json.restaurants.length; i++) {
                             _this.restaurantNamesDictionary.add(json.restaurants[i].name, json.restaurants[i].id);
+                            _this.loadRestaurant(json.restaurants[i].name, json.restaurants[i].id);
                         }
                         _this.restaurantNames.emit(_this.restaurantNamesDictionary);
+                    });
+                };
+                RestaurantsService.prototype.loadRestaurant = function (name, id) {
+                    var _this = this;
+                    //TODO store restaurant on storage and check the id (if id from server > crt id load it)
+                    this.loadingRestaurants.push(name);
+                    this.http.request("/app/src/restaurantdata/" + id + "/" + id + ".json")
+                        .subscribe(function (res) {
+                        if (res.status > 199 && res.status < 300) {
+                            var json = res.json();
+                            var rest = new RestaurantModel_1.Restaurant().deserialize(json);
+                            _this.restaurants.add(name, rest);
+                        }
+                        else {
+                            //todo error
+                            console.error("Invalid restaurant " + name + " id " + id + " res.status " + res.status);
+                        }
+                        _this.loadingRestaurants.splice(_this.loadingRestaurants.indexOf(name), 1);
+                    }, function (error) {
+                        console.error("ERROR: Invalid restaurant " + name + " id " + id);
+                        _this.loadingRestaurants.splice(_this.loadingRestaurants.indexOf(name), 1);
                     });
                 };
                 RestaurantsService = __decorate([

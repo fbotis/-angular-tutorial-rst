@@ -19,6 +19,16 @@ export class MenuItem implements Serializable<MenuItem> {
 		this.weight = input.weight;
 		return this;
 	}
+
+	filter(query: string): boolean {
+		var r = new RegExp(query, "i");
+		if (this.name.match(r) != null) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 }
 
 export class MenuCategory implements Serializable<MenuCategory> {
@@ -27,6 +37,7 @@ export class MenuCategory implements Serializable<MenuCategory> {
 
 
 	menuItems: Array<MenuItem> = new Array<MenuItem>();
+	filteredMenuItems: Array<MenuItem> = new Array<MenuItem>();
 
 	deserialize(input) {
 		this.name = input.name;
@@ -35,7 +46,19 @@ export class MenuCategory implements Serializable<MenuCategory> {
 			var menuItem: MenuItem = new MenuItem().deserialize(input.menuItems[i]);
 			this.menuItems.push(menuItem);
 		}
+		this.filteredMenuItems = this.menuItems;
 		return this;
+	}
+
+	filter(query: string) {
+		this.filteredMenuItems = new Array<MenuItem>();
+		for (var i = 0; i < this.menuItems.length; i++) {
+			var menuItem: MenuItem = this.menuItems[i]''
+			if (menuItem.filter(query)) {
+				this.filteredMenuItems.push(menuItem);
+			}
+		}
+
 	}
 }
 
@@ -49,6 +72,13 @@ export class Menu implements Serializable<Menu>{
 		}
 
 		return this;
+	}
+
+	filter(query: string) {
+		for (var i = 0; i < this.categories.length; i++) {
+			var menuCategory: MenuCategory = this.categories[i];
+			menuCategory.filter(query);
+		}
 	}
 
 }

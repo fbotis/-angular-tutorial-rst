@@ -15,12 +15,22 @@ System.register([], function(exports_1) {
                     this.weight = input.weight;
                     return this;
                 };
+                MenuItem.prototype.filter = function (query) {
+                    var r = new RegExp(query, "i");
+                    if (this.name.match(r) != null) {
+                        return true;
+                    }
+                    else {
+                        return false;
+                    }
+                };
                 return MenuItem;
             })();
             exports_1("MenuItem", MenuItem);
             MenuCategory = (function () {
                 function MenuCategory() {
                     this.menuItems = new Array();
+                    this.filteredMenuItems = new Array();
                 }
                 MenuCategory.prototype.deserialize = function (input) {
                     this.name = input.name;
@@ -29,7 +39,18 @@ System.register([], function(exports_1) {
                         var menuItem = new MenuItem().deserialize(input.menuItems[i]);
                         this.menuItems.push(menuItem);
                     }
+                    this.filteredMenuItems = this.menuItems;
                     return this;
+                };
+                MenuCategory.prototype.filter = function (query) {
+                    this.filteredMenuItems = new Array();
+                    for (var i = 0; i < this.menuItems.length; i++) {
+                        var menuItem = this.menuItems[i];
+                        '';
+                        if (menuItem.filter(query)) {
+                            this.filteredMenuItems.push(menuItem);
+                        }
+                    }
                 };
                 return MenuCategory;
             })();
@@ -44,6 +65,12 @@ System.register([], function(exports_1) {
                         this.categories.push(menuCategory);
                     }
                     return this;
+                };
+                Menu.prototype.filter = function (query) {
+                    for (var i = 0; i < this.categories.length; i++) {
+                        var menuCategory = this.categories[i];
+                        menuCategory.filter(query);
+                    }
                 };
                 return Menu;
             })();

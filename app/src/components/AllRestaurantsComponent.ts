@@ -9,8 +9,6 @@ import {Dictionary} from "../util/Dictionary";
 import {APP_BASE_HREF, ROUTER_DIRECTIVES, ROUTER_BINDINGS, ROUTER_PRIMARY_COMPONENT, HashLocationStrategy, LocationStrategy, Router, RouteConfig, } from 'angular2/router';
 import {FORM_DIRECTIVES} from 'angular2/common';
 
-
-
 @Component({
 	directives: [RestaurantComponent, FORM_DIRECTIVES],
 	providers: [HTTP_PROVIDERS],

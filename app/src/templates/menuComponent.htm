@@ -1,6 +1,7 @@
 <div class="row">
     <h4>MENU</h4>
     <ul class="collection">
+        <input class="collection-item" type="text" placeholder="Filter menu items" id="filterMenuItems" [(ngModel)]="filter" (keyup)="filterChanged()" />
         <menuCategory *ngFor="#menuCategory of menu.categories" [menuCategory]="menuCategory"></menuCategory>
     </ul>
 </div>

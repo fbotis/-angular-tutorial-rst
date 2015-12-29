@@ -7,7 +7,6 @@ import {bind, Component, View} from 'angular2/core';
 import {RestaurantsService} from "./services/RestaurantsService";
 import {Http, Response, HTTP_PROVIDERS} from "angular2/http";
 
-
 @Component({
   selector: 'rst',
   directives: [ROUTER_DIRECTIVES],
@@ -21,6 +20,7 @@ import {Http, Response, HTTP_PROVIDERS} from "angular2/http";
   ])
 class RstApp {
   constructor(public router: Router) {
+
   }
 }
 

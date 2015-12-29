@@ -1,4 +1,4 @@
 <li class="collection-header card teal accent-1">
     {{menuCategory.name}}
 </li>
-<menuItem *ngFor="#menuItem of menuCategory.menuItems" [menuItem]="menuItem"></menuItem>
+<menuItem *ngFor="#menuItem of menuCategory.filteredMenuItems" [menuItem]="menuItem"></menuItem>
