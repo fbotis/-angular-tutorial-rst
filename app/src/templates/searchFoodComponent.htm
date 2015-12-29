@@ -1,0 +1,9 @@
+<div *ngFor="#restaurant of restaurants">
+    <div *ngFor="#category of restaurant.menu.categories">
+        <div *ngFor="#item of category.filteredMenuItems">
+            {{item.name}}
+        </div>
+    </div>
+
+
+</div>

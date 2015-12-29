@@ -6,29 +6,36 @@ import {SearchFoodComponent} from "./components/SearchFoodComponent";
 import {bind, Component, View} from 'angular2/core';
 import {RestaurantsService} from "./services/RestaurantsService";
 import {Http, Response, HTTP_PROVIDERS} from "angular2/http";
+import {FORM_DIRECTIVES} from 'angular2/common';
 
 @Component({
   selector: 'rst',
-  directives: [ROUTER_DIRECTIVES],
+  directives: [ROUTER_DIRECTIVES,FORM_DIRECTIVES],
   templateUrl: 'app/src/templates/app.htm'
 })
 @RouteConfig([
     { path: '/home', name: 'Home', component: AllRestaurantsComponent, useAsDefault: true },
-    { path: '/deals', name: 'Deals', component: SearchFoodComponent },
-    { path: '/about', name: 'About', component: SearchFoodComponent },
-    { path: '/contact', name: 'Contact', component: SearchFoodComponent },
+    { path: '/search/:query', name: 'Search', component: SearchFoodComponent },
   ])
-class RstApp {
+export class RstApp {
+  filter:string;
+
   constructor(public router: Router) {
 
   }
+
+  filterChanged(){
+    console.log("test");
+    this.router.navigate(['./Search', {query: this.filter}]);
+   }
+  
 }
 
 bootstrap(RstApp, [HTTP_PROVIDERS,
   RestaurantsService,
   ROUTER_BINDINGS,
   bind(ROUTER_PRIMARY_COMPONENT).toValue(RstApp),
-  bind(APP_BASE_HREF).toValue('/'),
-  bind(LocationStrategy).toClass(HashLocationStrategy)
+  bind(APP_BASE_HREF).toValue('/')
+  // ,bind(LocationStrategy).toClass(HashLocationStrategy)
 ]);
 

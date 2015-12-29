@@ -46,7 +46,6 @@ System.register([], function(exports_1) {
                     this.filteredMenuItems = new Array();
                     for (var i = 0; i < this.menuItems.length; i++) {
                         var menuItem = this.menuItems[i];
-                        '';
                         if (menuItem.filter(query)) {
                             this.filteredMenuItems.push(menuItem);
                         }
@@ -93,6 +92,9 @@ System.register([], function(exports_1) {
                     this.photos = input.photos;
                     this.menu = new Menu().deserialize(input.menu);
                     return this;
+                };
+                Restaurant.prototype.filter = function (query) {
+                    this.menu.filter(query);
                 };
                 return Restaurant;
             })();

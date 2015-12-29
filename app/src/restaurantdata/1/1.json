@@ -1,0 +1,145 @@
+{
+    "id": 1,
+    "name": "Waterfront",
+    "logoUrl": "app/src/restaurantdata/0/logo.jpg",
+    "type": "Indian, Pakistani",
+    "address": "Unit R01, Ragged Staff Wharf, Queensway Road",
+    "email": "email@email.com",
+    "location": "36.135208,-5.354150",
+    "hasDelivery": false,
+    "hasTakeAway": true,
+    "tel": "+350 200 46993",
+    "websiteurl": "",
+    "fburl": "https://www.facebook.com/Raj-Curry-House-1415386362006409/",
+    "tripadvisorurl": "www.tripadvisor.com/Restaurant_Review-g187510-d5502261-Reviews-Raj_s_Curry_House-Gibraltar.html",
+    "openhours": "Monday - Sunday 9-22",
+    "photos": [
+        "app/src/restaurantdata/0/0.jpg",
+        "app/src/restaurantdata/0/1.jpg",
+        "app/src/restaurantdata/0/2.jpg",
+        "app/src/restaurantdata/0/3.jpg"
+    ],
+    "menu": {
+        "menuCategories": [{
+            "name": "Waterfront",
+            "description": "???",
+            "menuItems": [{
+                "name": "WaterfrontMasala Papad",
+                "price": "1.00",
+                "photoUrl": "http://www.acurryofalife.com/wp-content/uploads/2013/06/IMG_0056.jpg",
+                "description": "???",
+                "ingredients": "???",
+                "weight": "80 gr"
+            }, {
+                "name": "WaterfrontPapadums",
+                "price": "0.35",
+                "photoUrl": "http://www.acurryofalife.com/wp-content/uploads/2013/06/IMG_0056.jpg",
+                "description": "???",
+                "ingredients": "???",
+                "weight": "80 gr"
+            }, {
+                "name": "WaterfrontPickle Tray",
+                "price": "1.50",
+                "photoUrl": "http://www.acurryofalife.com/wp-content/uploads/2013/06/IMG_0056.jpg",
+                "description": "???",
+                "ingredients": "???",
+                "weight": "80 gr"
+            }]
+        }, {
+            "name": "Side Dishes",
+            "description": "???",
+            "menuItems": [{
+                "name": "Raita of Your Choice",
+                "price": "3.00",
+                "photoUrl": "http://www.acurryofalife.com/wp-content/uploads/2013/06/IMG_0056.jpg",
+                "description": "???",
+                "ingredients": "???",
+                "weight": "80 gr"
+            }, {
+                "name": "Green Salad (Seasonal)",
+                "price": "3.00",
+                "photoUrl": "http://www.acurryofalife.com/wp-content/uploads/2013/06/IMG_0056.jpg",
+                "description": "???",
+                "ingredients": "???",
+                "weight": "80 gr"
+            }]
+        }, {
+            "name": "Starters - Vegetarian",
+            "description": "???",
+            "menuItems": [{
+                "name": "Masala Papad",
+                "price": "1.00",
+                "photoUrl": "http://www.acurryofalife.com/wp-content/uploads/2013/06/IMG_0056.jpg",
+                "description": "???",
+                "ingredients": "???",
+                "weight": "80 gr"
+            }]
+        }, {
+            "name": "Non-Vegetarian Starters",
+            "description": "???",
+            "menuItems": [{
+                "name": "Masala Papad",
+                "price": "1.00",
+                "photoUrl": "http://www.acurryofalife.com/wp-content/uploads/2013/06/IMG_0056.jpg",
+                "description": "???",
+                "ingredients": "???",
+                "weight": "80 gr"
+            }]
+        }, {
+            "name": "Vegetarian Main Dishes",
+            "description": "???",
+            "menuItems": [{
+                "name": "Masala Papad",
+                "price": "1.00",
+                "photoUrl": "http://www.acurryofalife.com/wp-content/uploads/2013/06/IMG_0056.jpg",
+                "description": "???",
+                "ingredients": "???",
+                "weight": "80 gr"
+            }]
+        }, {
+            "name": "Rice and Biryanis",
+            "description": "???",
+            "menuItems": [{
+                "name": "Masala Papad",
+                "price": "1.00",
+                "photoUrl": "http://www.acurryofalife.com/wp-content/uploads/2013/06/IMG_0056.jpg",
+                "description": "???",
+                "ingredients": "???",
+                "weight": "80 gr"
+            }]
+        }, {
+            "name": "Chicken Dishes",
+            "description": "???",
+            "menuItems": [{
+                "name": "Masala Papad",
+                "price": "1.00",
+                "photoUrl": "http://www.acurryofalife.com/wp-content/uploads/2013/06/IMG_0056.jpg",
+                "description": "???",
+                "ingredients": "???",
+                "weight": "80 gr"
+            }]
+        }, {
+            "name": "Tandoori Dishes",
+            "description": "???",
+            "menuItems": [{
+                "name": "Masala Papad",
+                "price": "1.00",
+                "photoUrl": "http://www.acurryofalife.com/wp-content/uploads/2013/06/IMG_0056.jpg",
+                "description": "???",
+                "ingredients": "???",
+                "weight": "80 gr"
+            }]
+        }, {
+            "name": "Lamb Dishes",
+            "description": "???",
+            "menuItems": [{
+                "name": "Masala Papad",
+                "price": "1.00",
+                "photoUrl": "http://www.acurryofalife.com/wp-content/uploads/2013/06/IMG_0056.jpg",
+                "description": "???",
+                "ingredients": "???",
+                "weight": "80 gr"
+            }]
+        }]
+    }
+}

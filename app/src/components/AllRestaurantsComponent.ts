@@ -12,7 +12,6 @@ import {FORM_DIRECTIVES} from 'angular2/common';
 @Component({
 	directives: [RestaurantComponent, FORM_DIRECTIVES],
 	providers: [HTTP_PROVIDERS],
-
 	templateUrl: 'app/src/templates/allRestaurantsComponent.htm'
 })
 export class AllRestaurantsComponent {

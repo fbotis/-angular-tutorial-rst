@@ -53,7 +53,7 @@ export class MenuCategory implements Serializable<MenuCategory> {
 	filter(query: string) {
 		this.filteredMenuItems = new Array<MenuItem>();
 		for (var i = 0; i < this.menuItems.length; i++) {
-			var menuItem: MenuItem = this.menuItems[i]''
+			var menuItem: MenuItem = this.menuItems[i];
 			if (menuItem.filter(query)) {
 				this.filteredMenuItems.push(menuItem);
 			}
@@ -127,4 +127,9 @@ export class Restaurant implements Serializable<Restaurant>{
 
 		return this;
 	}
+
+	filter(query: string) {
+		this.menu.filter(query);
+	}
+
 } 
