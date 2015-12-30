@@ -66,8 +66,8 @@ export class Menu implements Serializable<Menu>{
 	categories: Array<MenuCategory> = new Array<MenuCategory>();
 
 	deserialize(input) {
-		for (var i = 0; i < input.menuCategories.length; i++) {
-			var menuCategory: MenuCategory = new MenuCategory().deserialize(input.menuCategories[i]);
+		for (var i = 0; i < input.categories.length; i++) {
+			var menuCategory: MenuCategory = new MenuCategory().deserialize(input.categories[i]);
 			this.categories.push(menuCategory);
 		}
 
@@ -105,7 +105,7 @@ export class Restaurant implements Serializable<Restaurant>{
 	hasTakeAway: boolean;
 	hasDelivery: boolean;
 
-	menu: Menu;
+	menu: Menu=new Menu();
 
 	deserialize(input) {
 		this.id=input.id;
@@ -134,4 +134,4 @@ export class Restaurant implements Serializable<Restaurant>{
 		this.menu.filter(query);
 	}
 
-} 
+}

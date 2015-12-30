@@ -59,8 +59,8 @@ System.register([], function(exports_1) {
                     this.categories = new Array();
                 }
                 Menu.prototype.deserialize = function (input) {
-                    for (var i = 0; i < input.menuCategories.length; i++) {
-                        var menuCategory = new MenuCategory().deserialize(input.menuCategories[i]);
+                    for (var i = 0; i < input.categories.length; i++) {
+                        var menuCategory = new MenuCategory().deserialize(input.categories[i]);
                         this.categories.push(menuCategory);
                     }
                     return this;
@@ -76,6 +76,7 @@ System.register([], function(exports_1) {
             exports_1("Menu", Menu);
             Restaurant = (function () {
                 function Restaurant() {
+                    this.menu = new Menu();
                 }
                 Restaurant.prototype.deserialize = function (input) {
                     this.id = input.id;

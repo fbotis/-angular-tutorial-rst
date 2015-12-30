@@ -20,7 +20,7 @@
         "app/src/restaurantdata/0/3.jpg"
     ],
     "menu": {
-        "menuCategories": [{
+        "categories": [{
             "name": "Appetisers",
             "description": "???",
             "menuItems": [{

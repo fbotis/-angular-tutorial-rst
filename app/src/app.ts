@@ -16,6 +16,7 @@ import {FORM_DIRECTIVES} from 'angular2/common';
 })
 @RouteConfig([
   { path: '/home', name: 'Home', component: AllRestaurantsComponent, useAsDefault: true },
+  { path: '/new', name: 'New', component: RestaurantFormComponent },
   { path: '/search/:query', name: 'Search', component: SearchFoodComponent },
 ])
 export class RstApp {
@@ -36,6 +37,5 @@ bootstrap(RstApp, [HTTP_PROVIDERS,
   ROUTER_BINDINGS,
   bind(ROUTER_PRIMARY_COMPONENT).toValue(RstApp),
   bind(APP_BASE_HREF).toValue('/')
-  // ,bind(LocationStrategy).toClass(HashLocationStrategy)
+  ,bind(LocationStrategy).toClass(HashLocationStrategy)
 ]);
-

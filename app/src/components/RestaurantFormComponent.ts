@@ -23,6 +23,9 @@ export class RestaurantFormComponent {
 	constructor(public routeParams: RouteParams, public restaurantsService: RestaurantsService) {
 		var restaurantName: string = routeParams.get('name');
 		this.restaurant = restaurantsService.restaurants[restaurantName];
+		if (this.restaurant==null){
+			this.restaurant=new Restaurant();
+		}
 	}
 
 	addNewMenuItem(category: MenuCategory) {

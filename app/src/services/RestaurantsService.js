@@ -92,7 +92,7 @@ System.register(["angular2/core", "../model/RestaurantModel", "angular2/http", "
                         }
                         _this.loadingRestaurants.splice(_this.loadingRestaurants.indexOf(name), 1);
                     }, function (error) {
-                        console.error("ERROR: Invalid restaurant " + name + " id " + id);
+                        console.error("ERROR: Invalid restaurant " + name + " id " + id + " error: " + error);
                         _this.loadingRestaurants.splice(_this.loadingRestaurants.indexOf(name), 1);
                     });
                 };

@@ -1,4 +1,4 @@
-System.register(['angular2/platform/browser', 'angular2/router', "./components/AllRestaurantsComponent", "./components/SearchFoodComponent", 'angular2/core', "./services/RestaurantsService", "angular2/http", 'angular2/common'], function(exports_1) {
+System.register(['angular2/platform/browser', 'angular2/router', "./components/AllRestaurantsComponent", "./components/SearchFoodComponent", "./components/RestaurantFormComponent", 'angular2/core', "./services/RestaurantsService", "angular2/http", 'angular2/common'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
         switch (arguments.length) {
@@ -10,7 +10,7 @@ System.register(['angular2/platform/browser', 'angular2/router', "./components/A
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var browser_1, router_1, AllRestaurantsComponent_1, SearchFoodComponent_1, core_1, RestaurantsService_1, http_1, common_1;
+    var browser_1, router_1, AllRestaurantsComponent_1, SearchFoodComponent_1, RestaurantFormComponent_1, core_1, RestaurantsService_1, http_1, common_1;
     var RstApp;
     return {
         setters:[
@@ -25,6 +25,9 @@ System.register(['angular2/platform/browser', 'angular2/router', "./components/A
             },
             function (SearchFoodComponent_1_1) {
                 SearchFoodComponent_1 = SearchFoodComponent_1_1;
+            },
+            function (RestaurantFormComponent_1_1) {
+                RestaurantFormComponent_1 = RestaurantFormComponent_1_1;
             },
             function (core_1_1) {
                 core_1 = core_1_1;
@@ -54,6 +57,7 @@ System.register(['angular2/platform/browser', 'angular2/router', "./components/A
                     }),
                     router_1.RouteConfig([
                         { path: '/home', name: 'Home', component: AllRestaurantsComponent_1.AllRestaurantsComponent, useAsDefault: true },
+                        { path: '/new', name: 'New', component: RestaurantFormComponent_1.RestaurantFormComponent },
                         { path: '/search/:query', name: 'Search', component: SearchFoodComponent_1.SearchFoodComponent },
                     ]), 
                     __metadata('design:paramtypes', [router_1.Router])
@@ -65,7 +69,8 @@ System.register(['angular2/platform/browser', 'angular2/router', "./components/A
                 RestaurantsService_1.RestaurantsService,
                 router_1.ROUTER_BINDINGS,
                 core_1.bind(router_1.ROUTER_PRIMARY_COMPONENT).toValue(RstApp),
-                core_1.bind(router_1.APP_BASE_HREF).toValue('/')
+                core_1.bind(router_1.APP_BASE_HREF).toValue('/'),
+                core_1.bind(router_1.LocationStrategy).toClass(router_1.HashLocationStrategy)
             ]);
         }
     }

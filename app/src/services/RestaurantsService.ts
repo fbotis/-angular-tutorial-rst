@@ -71,7 +71,7 @@ export class RestaurantsService {
 				
 				this.loadingRestaurants.splice(this.loadingRestaurants.indexOf(name), 1);
 			}, (error: any) => {
-				console.error("ERROR: Invalid restaurant "+name+" id "+id);
+				console.error("ERROR: Invalid restaurant "+name+" id "+id+" error: "+error);
 				this.loadingRestaurants.splice(this.loadingRestaurants.indexOf(name), 1);
 			});
 	}

@@ -39,6 +39,9 @@ System.register(["angular2/core", "../services/RestaurantsService", "../model/Re
                     this.menuItemsOff = false;
                     var restaurantName = routeParams.get('name');
                     this.restaurant = restaurantsService.restaurants[restaurantName];
+                    if (this.restaurant == null) {
+                        this.restaurant = new RestaurantModel_1.Restaurant();
+                    }
                 }
                 RestaurantFormComponent.prototype.addNewMenuItem = function (category) {
                     category.menuItems.push(new RestaurantModel_1.MenuItem());
