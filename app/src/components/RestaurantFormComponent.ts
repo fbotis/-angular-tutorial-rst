@@ -29,9 +29,16 @@ export class RestaurantFormComponent {
 		category.menuItems.push(new MenuItem());
 	}
 
+
+
 	addNewCategory() {
 		this.restaurant.menu.categories.push(new MenuCategory());
-		console.log(JSON.stringify(this.restaurant));
+		var json=JSON.stringify(this.restaurant,function(key,value){
+				if (key=="filteredMenuItems") return undefined;
+    			else return value;
+
+		});
+		localStorage.setItem(this.restaurant.name+"_editform",json);
 	}
 
 	toggleRestaurantDetails(){

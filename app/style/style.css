@@ -40,3 +40,7 @@ body {
 .menuItemsOff {
     display: none;
 }
+.menuItemDetailForm {
+    border: black;
+    border-style: double;
+}

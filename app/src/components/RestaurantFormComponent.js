@@ -45,7 +45,13 @@ System.register(["angular2/core", "../services/RestaurantsService", "../model/Re
                 };
                 RestaurantFormComponent.prototype.addNewCategory = function () {
                     this.restaurant.menu.categories.push(new RestaurantModel_1.MenuCategory());
-                    console.log(JSON.stringify(this.restaurant));
+                    var json = JSON.stringify(this.restaurant, function (key, value) {
+                        if (key == "filteredMenuItems")
+                            return undefined;
+                        else
+                            return value;
+                    });
+                    localStorage.setItem(this.restaurant.name + "_editform", json);
                 };
                 RestaurantFormComponent.prototype.toggleRestaurantDetails = function () {
                     this.restaurantDetailsOff = !this.restaurantDetailsOff;
