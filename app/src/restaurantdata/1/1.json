@@ -247,8 +247,8 @@
                 "price": "4.95"
             }, {
                 "name": "Chef’s Special Recipe Spaghetti Bolognese",
-                "price": "4.95",
-                "description": "Spaghetti topped with lean beef, cooked in a tomato sauce, topped with cheddar cheese"
+                "description": "Spaghetti topped with lean beef, cooked in a tomato sauce, topped with cheddar cheese",
+                "price": "4.95"
             }, {
                 "name": "Fish Finger Sandwich",
                 "description": "Fish fingers, lightly crumbed in a white bread sandwich, with hand cut chips",
@@ -263,6 +263,172 @@
                 "price": "4.95"
             }],
             "name": "Childrens’ Mains"
+        }, {
+            "menuItems": [{
+                "name": "Kelly’s Ice Cream Sundae",
+                "description": "Vanilla, strawberry & chocolate ice cream, topped with whipped cream",
+                "price": "3.50"
+            }, {
+                "name": "Hot Chocolate Muffin",
+                "description": "Hot baked chocolate muffin with chocolate sauce & cream ",
+                "price": "3.50"
+            }, {
+                "name": "Fresh Fruit Salad",
+                "price": "3.50"
+            }, {}],
+            "name": "Children's Desserts"
+        }, {
+            "menuItems": [{
+                "name": "Homemade Banoffee Pie",
+                "description": "Served with whipped cream ",
+                "price": "4.95"
+            }, {
+                "name": "Waterfront Cheesecake",
+                "description": "With fresh cream ",
+                "price": "5.50"
+            }, {
+                "name": "Profiteroles",
+                "description": "Filled with vanilla cream & chocolate sauce",
+                "price": "5.50"
+            }, {
+                "name": "Pecan Pie ",
+                "description": "With vanilla ice cream and coulis",
+                "price": "5.50"
+            }, {
+                "name": "Trio of Kelly’s Ice Cream",
+                "description": "Double chocolate, strawberry, vanilla",
+                "price": "5.50"
+            }],
+            "name": "Desserts"
+        }, {
+            "menuItems": [{
+                "name": "Carrot Cake",
+                "description": "With vanilla frosting and whipped cream",
+                "price": "4.50"
+            }, {
+                "name": "Coffee & Walnut Cake",
+                "description": "With whipped cream",
+                "price": "4.50"
+            }, {
+                "name": "Hot Chocolate Muffin",
+                "description": "With cream",
+                "price": "3.50"
+            }, {
+                "name": "Triple Chocolate Cake",
+                "description": "With chocolate sauce and whipped cream",
+                "price": "4.50"
+            }, {
+                "name": "Warm Scones",
+                "description": "With whipped cream and strawberry jam",
+                "price": "3.50"
+            }],
+            "name": "Cakes"
+        }, {
+            "menuItems": [{
+                "name": "White Coffee",
+                "price": "1.75"
+            }, {
+                "name": "Espresso",
+                "price": "1.60"
+            }, {
+                "name": "Double Espresso",
+                "price": "1.95"
+            }, {
+                "name": "Cortado",
+                "price": "1.75"
+            }, {
+                "name": "Americano",
+                "price": "1.75"
+            }, {
+                "name": "Cappuccino",
+                "price": "1.95"
+            }, {
+                "name": "Cappuccino with whipped cream",
+                "price": "2.00"
+            }, {
+                "name": "Latte",
+                "price": "1.95"
+            }, {
+                "name": "Decaffeinated Coffee",
+                "price": "1.60",
+                "description": "Instant coffe"
+            }, {
+                "name": "Decaffeinated Coffee",
+                "price": "1.70",
+                "description": "Freshly brewed"
+            }],
+            "name": "Coffe",
+            "description": ""
+        }, {
+            "menuItems": [{
+                "name": "Pot of Tea",
+                "price": "1.85 ",
+                "description": "English Breakfast, Peppermint, Chamomile, Earl Grey, Green, Citrus, Decaffeinated "
+            }, {
+                "name": "Hot Chocolate ",
+                "price": "1.95"
+            }, {
+                "name": "Hot Chocolate with cream",
+                "price": "2.00"
+            }],
+            "name": "Tea"
+        }, {
+            "menuItems": [{
+                "name": "Fruit Juice ",
+                "description": "Apple, pineapple, cranberry, peach, orange, tomato ",
+                "price": "1.75"
+            }, {
+                "name": "Fresh orange juice",
+                "price": "3.00"
+            }],
+            "name": "Fruit Juices"
+        }, {
+            "menuItems": [{
+                "name": "Full English Breakfast",
+                "description": "Two fried eggs, sausage, two rashers of bacon, mushrooms, grilled tomato, beans, hash browns, toast ",
+                "price": "7.95"
+            }, {
+                "name": "Half English Breakfast ",
+                "description": "Fried egg, sausage, bacon, grilled tomato, beans, hash brown, toast ",
+                "price": "4.95"
+            }, {
+                "name": "Vegetarian Breakfast",
+                "description": "6.95",
+                "price": "Two fried eggs, grilled tomato, mushrooms, beans, hash browns, toast "
+            }, {
+                "name": "Eggs on Toast",
+                "description": "Two slices of toast with either fried, scrambled or poached eggs ",
+                "price": "3.95"
+            }, {
+                "name": "Bacon Sandwich",
+                "description": "Served on thick cut bread ",
+                "price": "3.50 "
+            }, {
+                "name": "Sausage Sandwich ",
+                "price": "3.50 ",
+                "description": "Served on thick cut bread "
+            }, {
+                "name": "Toast",
+                "description": "Served with jam and butter",
+                "price": "1.95 "
+            }],
+            "name": "Breakfast"
+        }, {
+            "menuItems": [{
+                "name": "CREAM TEA",
+                "description": "Plain and Fruit Scones with Home Made Jam, Clotted Cream and a Choice of Teas (English Breakfast, Peppermint, Chamomile, Earl Grey, Green, Citrus and Decaffeinated)",
+                "price": "9.75"
+            }, {
+                "name": "AFTERNOON TEA ",
+                "description": "Assorted Finger Sandwiches, Fruit Scones, Pastries and a Choice of Teas  (English Breakfast, Peppermint, Chamomile, Earl Grey, Green, Citrus and Decaffeinated)",
+                "price": "12.95"
+            }, {
+                "name": "CHAMPAGNE TEA ",
+                "description": "With a glass of Lanson Brut. Assorted Finger Sandwiches, Fruit Scones, Pastries and a Choice of Teas  (English Breakfast, Peppermint, Chamomile, Earl Grey, Green, Citrus and Decaffeinated) ",
+                "price": "21.95"
+            }],
+            "name": "Tea at The Waterfront",
+            "description": "Monday - Friday 3pm - 6.30pm |  Saturday 3.30pm - 5.30pm | Sunday 3.30pm to 6.30pm"
         }, {
             "menuItems": []
         }]
