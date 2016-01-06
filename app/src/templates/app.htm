@@ -1,23 +1,31 @@
 <nav>
+
+
   <div class="nav-wrapper">
-    <a href="#!" class="brand-logo">Gib FoodSeeker</a>
+    <a href="#" data-activates="slide-out" class="button-collapse" onclick='$(".button-collapse").sideNav()'><i class="mdi-navigation-menu"></i></a>
+    <ul id="slide-out" class="side-nav" onclick='$(".button-collapse").sideNav()'>
+      <li><a [routerLink]="['Home']">Restaurants</a></li>
+      <li><a [routerLink]="['New']">New</a></li>
+    </ul>
+
+    <a href="#!" class="brand-logo hide-on-med-and-down">GibFoodSeeker</a>
+
+    <a href="#!" class="right brand-logo hide-on-large-only"><i class="material-icons">loyalty</i></a>
+
+    <div class="searchcontainer">
+        <input type="search"  placeholder="Search for food here" required id="searchquery" type="text" [(ngModel)]="filter"/>
+        <i class="material-icons btn-flat  waves-effect" (click)="filterChanged()">search</i>
+    </div>
+
     <ul class="right hide-on-med-and-down">
       <li><a [routerLink]="['Home']">Restaurants</a></li>
       <li><a [routerLink]="['New']">New</a></li>
     </ul>
-    <div class="container center">
-      <div class="row">
-        <div class="col s5 offset-s2 blue">
-          <input placeholder="What do you want to eat today?" id="searchquery" type="text" [(ngModel)]="filter" />
-        </div>
-        <div class="col s1">
-          <a (click)="filterChanged()" class="btn-floating btn-large waves-effect waves-light green">
-            <i class="material-icons">search</i>
-          </a>
-        </div>
-      </div>
-    </div>
+
+
   </div>
 </nav>
+
+
 
 <router-outlet></router-outlet>

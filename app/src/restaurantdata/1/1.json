@@ -429,9 +429,7 @@
             }],
             "name": "Tea at The Waterfront",
             "description": "Monday - Friday 3pm - 6.30pm |  Saturday 3.30pm - 5.30pm | Sunday 3.30pm to 6.30pm"
-        }, {
-            "menuItems": []
-        }]
+            }]
     },
     "id": "1",
     "name": "The Waterfront",

@@ -20,6 +20,7 @@ export class AllRestaurantsComponent {
 	restaurantNames: Dictionary = new Dictionary();
 	filteredRestaurantNames: Dictionary = new Dictionary();
 	filter: string;
+
 	constructor(public http: Http, public router: Router, public restaurantsService: RestaurantsService) {
 		restaurantsService.restaurantNames.subscribe((response: Dictionary) => {
 			this.restaurantNames = response;
@@ -51,6 +52,8 @@ export class AllRestaurantsComponent {
 			}
 		}
 	}
+
+
 
 
 }

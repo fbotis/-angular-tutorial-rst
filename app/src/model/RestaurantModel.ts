@@ -22,7 +22,7 @@ export class MenuItem implements Serializable<MenuItem> {
 
 	filter(query: string): boolean {
 		var r = new RegExp(query, "i");
-		if (this.name.match(r) != null) {
+		if (this.name!=null && this.name.match(r) != null) {
 			return true;
 		}
 		else {

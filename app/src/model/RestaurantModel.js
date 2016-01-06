@@ -17,7 +17,7 @@ System.register([], function(exports_1) {
                 };
                 MenuItem.prototype.filter = function (query) {
                     var r = new RegExp(query, "i");
-                    if (this.name.match(r) != null) {
+                    if (this.name != null && this.name.match(r) != null) {
                         return true;
                     }
                     else {
